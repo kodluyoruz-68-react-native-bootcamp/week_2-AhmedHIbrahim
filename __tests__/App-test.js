@@ -48,8 +48,10 @@ it('Todo should be toggle when pressed', () => {
   fireEvent.press(item);
 
   const list = wrapper.getByTestId('list');
+
   expect(list.props.data[0].isDone).toBeTruthy();
 
   fireEvent.press(item);
+
   expect(list.props.data[0].isDone).toBeFalsy();
 });
